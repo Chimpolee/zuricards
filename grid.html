@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="grid-container">
+    <div class="grid-item item1">1</div>
+    <div class="grid-item item2">2</div>
+    <div class="grid-item item3">3</div>  
+    <div class="grid-item item4">4</div>
+    <div class="grid-item item5">5</div>
+  </div>
+
+  <style>
+      body{
+        background-color: #03192c;  
+      }
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        'a a b'
+        'c d d'
+        'c e e'
+        ;
+       width: 50%;
+        margin: auto;
+  grid-template-columns: 180px 150px 200px;
+  grid-template-rows: 120px 80px 80px ;
+}
+.grid-item {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.item1 { grid-area: a;
+  
+   background-color: #eb5020;
+   /* grid-column: 1 / span 2;
+  grid-row: 1/ span 3;*/
+  
+}
+
+.item2 {grid-area: b;
+  background-color: #ffa401;
+  /*  grid-column: 3;
+  grid-row: 1 / span 3;*/
+  
+}
+.item3{grid-area: c;
+    background-color: #05aa42;
+    
+    /*  grid-row:  4 / span 5;*/
+}
+.item4{grid-area: d;
+    background-color: #01aefd;
+    /*  grid-column: 2/ span 2;
+    grid-row: 4;*/
+}
+
+.item5 {grid-area: e;
+    background-color: #01aefd;
+     /* grid-column: 2/ span 2;
+    grid-row: 5;
+    height: 50px;*/}
+  </style>
+</body>
+</html>
